@@ -6,6 +6,7 @@ Designed and simulated a multi-VLAN network architecture for a new branch office
 ### 🛠️ Key Technologies & Skills
 * 🛡️ **VLANs (802.1Q):** Segmented broadcast domains to ensure security between Admin, HR, and Customer Service networks.
 * 🔀 **Router-on-a-Stick:** Configured sub-interfaces on a Cisco router to enable Inter-VLAN routing via a single physical trunk link.
+* 🔒 **Device Hardening:** Secured management plane by configuring **SSH** (`transport input ssh`) and password-protecting Console/VTY lines.
 * 🏷️ **DHCP Services:** Implemented dynamic IP allocation for 100+ endpoints across multiple pools.
 * 🔢 **VLSM Subnetting:** Optimized a `/24` network block into efficient `/26` subnets to maximize address usage.
 
@@ -23,6 +24,17 @@ The High-Level Design (HLD) illustrates the logical segmentation (VLANs) and phy
 | **Admin/IT** | 10 | `192.168.1.0/26` | `.1` |
 | **Finance/HR** | 20 | `192.168.1.64/26` | `.65` |
 | **Reception** | 30 | `192.168.1.128/26` | `.129` |
+
+---
+
+### 🔐 Lab Access Credentials
+To access the CLI of the devices in the `.pkt` simulation, use the following credentials:
+
+| Access Method | Password |
+| :--- | :--- |
+| **Console Line** | `cisco` |
+| **VTY (SSH/Telnet)** | `cisco` |
+| **Enable Secret** | `cisco` |
 
 ---
 
@@ -45,4 +57,3 @@ Successful ping test demonstrating Inter-VLAN routing between Admin and Finance 
 
 ### 📂 Project Files
 * **[Download Packet Tracer File (.pkt)](./XYZ_Branch_Design.pkt)**
-* **[View Full Design Report (PDF)](./XYZ_Branch_Report.pdf)**
